@@ -1,1 +1,113 @@
-/* Add styles here */
+body {
+    font-family: 'Pretendard', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #FFC796, #FF6B99, #A06EFF);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    margin: 0;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAAUVBMVEWFhYWDg4N3d3dtbW17e3t1dXVvoJHr6+s/Pz8zMzNwcHBDQ0NOTk5RUVFBEBD6+vreso1ERESAgIB/f38gICAeHh4qKio8PDwMDQwAAAD3t2hsAAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAKRJREFUOI1jYObwZ+D4c/H3Z2D+z0AANEZkZgYALTc3MHMwIDYjAza3tDAgHj9gY/D/B8PsB/EMAsSo7MDFwMBgpaOgYfj/BwP/HwY/H/Y/f2B+YID//8/fH4Z/f/7/f/7/f/7//w8M/w/m/wcD+D8w/H9g/v8gA5zg/4P5/wMA5//+MwA5/P83Ayn6/wMA5+//z8A5/P8DwwsB6gIAGfMHAd2Iq3sAAAAASUVORK5CYII=');
+    opacity: 0.05;
+    pointer-events: none;
+    z-index: -1;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    max-width: 90%;
+    width: 500px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.lotto-numbers-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.lotto-number {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.generate-button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    background: #fff;
+    color: #A06EFF;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+}
+
+.generate-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 1);
+    color: #FF6B99;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .lotto-number {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+
+    .generate-button {
+        font-size: 1rem;
+    }
+}
