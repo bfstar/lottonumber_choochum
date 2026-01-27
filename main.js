@@ -1,7 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
     const numberContainer = document.getElementById('lotto-numbers');
     const generateBtn = document.getElementById('generate-btn');
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const THEME_KEY = 'preferred-theme';
     let isGenerating = false; // 생성 중 상태를 관리하는 플래그
+
+    function applyTheme(theme) {
+        document.body.dataset.theme = theme;
+        const isDark = theme === 'dark';
+        themeToggleBtn.textContent = isDark ? '라이트 모드' : '다크 모드';
+        themeToggleBtn.setAttribute('aria-pressed', String(isDark));
+    }
+
+    function getInitialTheme() {
+        const savedTheme = localStorage.getItem(THEME_KEY);
+        if (savedTheme === 'dark' || savedTheme === 'light') {
+            return savedTheme;
+        }
+
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        return prefersDark ? 'dark' : 'light';
+    }
 
     function generateLottoNumbers() {
         if (isGenerating) return; // 이미 생성 중이면 함수 종료
@@ -38,6 +57,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     generateBtn.addEventListener('click', generateLottoNumbers);
+
+    themeToggleBtn.addEventListener('click', () => {
+        const nextTheme = document.body.dataset.theme === 'dark' ? 'light' : 'dark';
+        applyTheme(nextTheme);
+        localStorage.setItem(THEME_KEY, nextTheme);
+    });
+
+    applyTheme(getInitialTheme());
 
     // 초기 로딩 시 번호 생성
     generateLottoNumbers();

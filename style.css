@@ -1,16 +1,51 @@
+:root {
+    --text-color: #ffffff;
+    --container-bg: rgba(255, 255, 255, 0.1);
+    --container-border: 1px solid rgba(255, 255, 255, 0.2);
+    --container-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    --number-bg: rgba(255, 255, 255, 0.2);
+    --button-bg: #ffffff;
+    --button-text: #a06eff;
+    --button-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+    --button-hover-shadow: 0 0 30px rgba(255, 255, 255, 1);
+    --button-hover-text: #ff6b99;
+    --toggle-bg: rgba(255, 255, 255, 0.2);
+    --toggle-border: 1px solid rgba(255, 255, 255, 0.35);
+    --toggle-text: #ffffff;
+    --bg-gradient: linear-gradient(45deg, #ffc796, #ff6b99, #a06eff);
+}
+
+body[data-theme='dark'] {
+    --text-color: #e9ecff;
+    --container-bg: rgba(20, 24, 46, 0.72);
+    --container-border: 1px solid rgba(148, 163, 255, 0.18);
+    --container-shadow: 0 16px 40px rgba(8, 12, 30, 0.6);
+    --number-bg: rgba(148, 163, 255, 0.18);
+    --button-bg: #6d7bff;
+    --button-text: #0c1026;
+    --button-shadow: 0 10px 25px rgba(109, 123, 255, 0.45);
+    --button-hover-shadow: 0 12px 30px rgba(133, 146, 255, 0.6);
+    --button-hover-text: #050814;
+    --toggle-bg: rgba(109, 123, 255, 0.2);
+    --toggle-border: 1px solid rgba(177, 188, 255, 0.45);
+    --toggle-text: #e9ecff;
+    --bg-gradient: radial-gradient(circle at top, #1b1f3a 0%, #0b0e1a 55%, #05070f 100%);
+}
+
 body {
     font-family: 'Pretendard', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(45deg, #FFC796, #FF6B99, #A06EFF);
+    background: var(--bg-gradient);
     background-size: 400% 400%;
     animation: gradientBG 15s ease infinite;
     margin: 0;
-    color: #fff;
+    color: var(--text-color);
     text-align: center;
     position: relative;
+    transition: background 0.6s ease, color 0.3s ease;
 }
 
 body::before {
@@ -33,15 +68,16 @@ body::before {
 }
 
 .container {
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--container-bg);
     padding: 40px;
     border-radius: 20px;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border: var(--container-border);
+    box-shadow: var(--container-shadow);
     max-width: 90%;
     width: 500px;
+    position: relative;
 }
 
 h1 {
@@ -62,13 +98,13 @@ h1 {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.2);
+    background: var(--number-bg);
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.8rem;
     font-weight: bold;
-    color: #fff;
+    color: var(--text-color);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
 }
@@ -77,19 +113,45 @@ h1 {
     padding: 15px 30px;
     border: none;
     border-radius: 50px;
-    background: #fff;
-    color: #A06EFF;
+    background: var(--button-bg);
+    color: var(--button-text);
     font-size: 1.2rem;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+    box-shadow: var(--button-shadow);
 }
 
 .generate-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 0 30px rgba(255, 255, 255, 1);
-    color: #FF6B99;
+    box-shadow: var(--button-hover-shadow);
+    color: var(--button-hover-text);
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    border: var(--toggle-border);
+    background: var(--toggle-bg);
+    color: var(--toggle-text);
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+.theme-toggle:hover {
+    transform: translateY(-1px);
+    opacity: 0.95;
+}
+
+.theme-toggle:focus-visible {
+    outline: 2px solid rgba(255, 255, 255, 0.7);
+    outline-offset: 2px;
 }
 
 @media (max-width: 600px) {
@@ -99,6 +161,7 @@ h1 {
 
     h1 {
         font-size: 2rem;
+        padding-top: 16px;
     }
 
     .lotto-number {
@@ -109,5 +172,12 @@ h1 {
 
     .generate-button {
         font-size: 1rem;
+    }
+
+    .theme-toggle {
+        top: 12px;
+        right: 12px;
+        padding: 7px 12px;
+        font-size: 0.9rem;
     }
 }
