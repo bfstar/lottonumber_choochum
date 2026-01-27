@@ -12,6 +12,31 @@
         <h1>로또 번호 추첨기</h1>
         <div id="lotto-numbers" class="lotto-numbers-container"></div>
         <button id="generate-btn" class="generate-button">번호 생성</button>
+
+        <section class="inquiry-section" aria-labelledby="inquiry-title">
+            <h2 id="inquiry-title" class="inquiry-title">제휴 문의</h2>
+            <p class="inquiry-description">간단한 내용을 남겨주시면 확인 후 연락드릴게요.</p>
+            <form
+                class="inquiry-form"
+                action="https://formspree.io/f/xaqopzzg"
+                method="POST"
+            >
+                <label class="form-label" for="partner-name">이름</label>
+                <input class="form-input" id="partner-name" name="name" type="text" autocomplete="name" required>
+
+                <label class="form-label" for="partner-email">이메일</label>
+                <input class="form-input" id="partner-email" name="email" type="email" autocomplete="email" required>
+
+                <label class="form-label" for="partner-company">회사/브랜드</label>
+                <input class="form-input" id="partner-company" name="company" type="text" autocomplete="organization">
+
+                <label class="form-label" for="partner-message">문의 내용</label>
+                <textarea class="form-textarea" id="partner-message" name="message" rows="4" required></textarea>
+
+                <input type="hidden" name="_subject" value="새 제휴 문의가 도착했어요">
+                <button class="inquiry-submit" type="submit">문의 보내기</button>
+            </form>
+        </section>
     </div>
     <script src="main.js"></script>
 </body>
