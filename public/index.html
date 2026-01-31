@@ -3,61 +3,239 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>로또 번호 추첨기</title>
+    <title>FREEBIT COMMUNITY · 코인 초보자부터 글로벌 고수까지</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false">다크 모드</button>
-        <h1>로또 번호 추첨기</h1>
-        <div id="lotto-numbers" class="lotto-numbers-container"></div>
-        <button id="generate-btn" class="generate-button">번호 생성</button>
+    <div class="orb orb-a"></div>
+    <div class="orb orb-b"></div>
+    <div class="orb orb-c"></div>
 
-        <section class="inquiry-section" aria-labelledby="inquiry-title">
-            <h2 id="inquiry-title" class="inquiry-title">제휴 문의</h2>
-            <p class="inquiry-description">간단한 내용을 남겨주시면 확인 후 연락드릴게요.</p>
-            <form
-                class="inquiry-form"
-                action="https://formspree.io/f/xaqopzzg"
-                method="POST"
-            >
-                <label class="form-label" for="partner-name">이름</label>
-                <input class="form-input" id="partner-name" name="name" type="text" autocomplete="name" required>
+    <div class="page">
+        <header class="site-header">
+            <div class="logo">FREEBIT <span>COMMUNITY</span></div>
+            <nav class="site-nav">
+                <a href="#recommend">추천 흐름</a>
+                <a href="#prompt">AI 프롬프트</a>
+                <a href="#global">글로벌 라운지</a>
+                <a href="#roadmap">비전</a>
+            </nav>
+            <button class="ghost-button" type="button">무료 시작</button>
+        </header>
 
-                <label class="form-label" for="partner-email">이메일</label>
-                <input class="form-input" id="partner-email" name="email" type="email" autocomplete="email" required>
+        <main>
+            <section class="hero">
+                <div class="hero-copy">
+                    <p class="eyebrow">모든 게 무료 · 전문가보다 더 뛰어난 시스템 커뮤니티</p>
+                    <h1>코인 초보자를 위한 종목 추천과 전세계 고수들의 인사이트를 한 번에.</h1>
+                    <p class="subtitle">
+                        AI 최적의 프롬프트로 개인 맞춤형 코인 탐색을 돕고, 글로벌 고수들의 시그널을
+                        실시간으로 묶어주는 커뮤니티. 지금은 전부 무료입니다.
+                    </p>
+                    <div class="cta-group">
+                        <button class="primary-button" type="button">무료 커뮤니티 입장</button>
+                        <button class="secondary-button" type="button">프롬프트 설계 보기</button>
+                    </div>
+                    <div class="hero-stats">
+                        <div>
+                            <strong>2,418+</strong>
+                            <span>초보자 맞춤 추천</span>
+                        </div>
+                        <div>
+                            <strong>74개국</strong>
+                            <span>글로벌 고수 라운지</span>
+                        </div>
+                        <div>
+                            <strong>0원</strong>
+                            <span>모든 기능 무료</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="signal-card">
+                        <div class="signal-title">오늘의 초보자 추천</div>
+                        <h3>안정적 흐름 + 상승 모멘텀</h3>
+                        <ul>
+                            <li>리스크 수준 2.3/5</li>
+                            <li>체결 강도: +18%</li>
+                            <li>AI 코멘트: 진입 구간 재확인</li>
+                        </ul>
+                        <button class="chip" type="button">무료 커뮤니티 알림</button>
+                    </div>
+                    <div class="signal-grid">
+                        <div class="signal-mini">
+                            <span>GLOBAL SIGNAL</span>
+                            <strong>22:41 UTC</strong>
+                            <p>유럽 고수 그룹, 단기 수급 변동 감지</p>
+                        </div>
+                        <div class="signal-mini">
+                            <span>AI PROMPT</span>
+                            <strong>v3.2 LIVE</strong>
+                            <p>초보용 리스크 컷 자동화 업데이트</p>
+                        </div>
+                        <div class="signal-mini">
+                            <span>FREE MODE</span>
+                            <strong>Always On</strong>
+                            <p>지금은 모든 기능이 무료로 열려 있음</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-                <label class="form-label" for="partner-company">회사/브랜드</label>
-                <input class="form-input" id="partner-company" name="company" type="text" autocomplete="organization">
+            <section id="recommend" class="section reveal">
+                <div class="section-heading">
+                    <h2>초보자에게 더 쉬운 추천 흐름</h2>
+                    <p>복잡한 지표 대신, 이해하기 쉬운 가이드와 핵심만 보여주는 추천 엔진.</p>
+                </div>
+                <div class="card-grid">
+                    <article class="feature-card">
+                        <h3>입문자 전용 큐레이션</h3>
+                        <p>변동성, 유동성, 심리 지수를 한 줄로 정리해 초보도 즉시 판단할 수 있습니다.</p>
+                        <span class="tag">Beginner First</span>
+                    </article>
+                    <article class="feature-card">
+                        <h3>무료 리스크 체크</h3>
+                        <p>포지션 크기, 이탈 기준, 손실 방어선까지 자동 추천.</p>
+                        <span class="tag">Risk Guard</span>
+                    </article>
+                    <article class="feature-card">
+                        <h3>실시간 글로벌 시그널</h3>
+                        <p>해외 고수들의 전략을 한국어로 정리해 즉시 공유.</p>
+                        <span class="tag">Global Loop</span>
+                    </article>
+                </div>
+            </section>
 
-                <label class="form-label" for="partner-message">문의 내용</label>
-                <textarea class="form-textarea" id="partner-message" name="message" rows="4" required></textarea>
+            <section id="prompt" class="section prompt-section reveal">
+                <div class="section-heading">
+                    <h2>AI 최적의 프롬프트 엔진</h2>
+                    <p>전문가보다 더 뛰어난 구조로 설계된 프롬프트를 직접 확인하세요.</p>
+                </div>
+                <div class="prompt-grid">
+                    <div class="prompt-card">
+                        <h4>01 · 데이터 해석</h4>
+                        <p>글로벌 거래 흐름, 온체인, 이슈를 통합해 가독성 높은 요약으로 변환.</p>
+                    </div>
+                    <div class="prompt-card">
+                        <h4>02 · 리스크 시뮬레이션</h4>
+                        <p>변동성 시나리오를 자동 생성해 초보가 이해할 수 있는 범위로 정리.</p>
+                    </div>
+                    <div class="prompt-card">
+                        <h4>03 · 커뮤니티 피드백</h4>
+                        <p>고수들의 피드백을 모델에 반영해 매일 더 정교해지는 추천.</p>
+                    </div>
+                </div>
+                <div class="prompt-flow">
+                    <div>
+                        <span>Prompt Stack</span>
+                        <strong>Insight → Safety → Action</strong>
+                    </div>
+                    <button class="secondary-button" type="button">프롬프트 샘플 보기</button>
+                </div>
+            </section>
 
-                <input type="hidden" name="_subject" value="새 제휴 문의가 도착했어요">
-                <button class="inquiry-submit" type="submit">문의 보내기</button>
-            </form>
-        </section>
-        <section class="inquiry-section" aria-labelledby="comments-title">
-            <h2 id="comments-title" class="inquiry-title">댓글</h2>
-            <div id="disqus_thread"></div>
-            <script>
-                var disqus_config = function () {
-                    this.page.url = window.location.href;
-                    this.page.identifier = window.location.pathname || "home";
-                };
-                (function () {
-                    var d = document, s = d.createElement("script");
-                    s.src = "https://productbuilder-tszv8e4f7f.disqus.com/embed.js";
-                    s.setAttribute("data-timestamp", +new Date());
-                    (d.head || d.body).appendChild(s);
-                })();
-            </script>
-            <noscript>
-                Please enable JavaScript to view the
-                <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-            </noscript>
-        </section>
+            <section id="global" class="section reveal">
+                <div class="section-heading">
+                    <h2>전세계 고수들이 모이는 글로벌 라운지</h2>
+                    <p>고급스러운 UI와 국제 커뮤니티 흐름을 동시에 담아낸 공간.</p>
+                </div>
+                <div class="lounge">
+                    <div class="lounge-panel">
+                        <h3>Pro Lounge</h3>
+                        <p>실시간 토론, 시그널 공유, 전략 리포트를 한 곳에서.</p>
+                        <ul>
+                            <li>다국어 동시 통역 요약</li>
+                            <li>전문가용 대시보드 모드</li>
+                            <li>커뮤니티 기반 리스크 경고</li>
+                        </ul>
+                    </div>
+                    <div class="lounge-map">
+                        <div class="map-chip">Seoul</div>
+                        <div class="map-chip">Singapore</div>
+                        <div class="map-chip">Berlin</div>
+                        <div class="map-chip">São Paulo</div>
+                        <div class="map-chip">Toronto</div>
+                        <div class="map-chip">Dubai</div>
+                        <div class="map-chip">Sydney</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section pricing-section reveal">
+                <div class="section-heading">
+                    <h2>모든 게 무료, 그리고 다음 단계</h2>
+                    <p>지금은 100% 무료. 수익이 생기면 더 크게 성장할 수 있는 유료 버전으로 확장합니다.</p>
+                </div>
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <h3>FREE MODE</h3>
+                        <p class="price">₩0</p>
+                        <ul>
+                            <li>초보자 추천 전체 공개</li>
+                            <li>AI 프롬프트 요약 리포트</li>
+                            <li>글로벌 커뮤니티 열람</li>
+                        </ul>
+                        <button class="primary-button" type="button">지금 무료 시작</button>
+                    </div>
+                    <div class="pricing-card premium">
+                        <div class="badge">Future Premium</div>
+                        <h3>PRO MODE</h3>
+                        <p class="price">수익이 생기면 업그레이드</p>
+                        <ul>
+                            <li>심화 시그널 + 실시간 코칭</li>
+                            <li>자동 전략 백테스트</li>
+                            <li>커뮤니티 수익화 툴</li>
+                        </ul>
+                        <button class="secondary-button" type="button">대기 리스트</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="roadmap" class="section roadmap reveal">
+                <div class="section-heading">
+                    <h2>업비트 협업까지 이어지는 커뮤니티 비전</h2>
+                    <p>브랜드 신뢰와 공익성을 지키며, 글로벌 최대 무료 커뮤니티로 성장합니다.</p>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-step">
+                        <span>Phase 1</span>
+                        <strong>초보자 추천 시스템 완성</strong>
+                        <p>무료 커뮤니티 확장, 학습형 추천 모델 고도화.</p>
+                    </div>
+                    <div class="timeline-step">
+                        <span>Phase 2</span>
+                        <strong>글로벌 고수 라운지 구축</strong>
+                        <p>다국어 네트워크, 고급 대시보드, 신뢰도 측정 시스템.</p>
+                    </div>
+                    <div class="timeline-step">
+                        <span>Phase 3</span>
+                        <strong>업비트 협업을 통한 생태계 확장</strong>
+                        <p>합법적이고 투명한 협업을 통해 안전한 코인 문화 확산.</p>
+                    </div>
+                </div>
+                <div class="notice">
+                    <strong>알림:</strong> 투자 판단은 개인 책임입니다. FREEBIT는 학습용 커뮤니티로 정보 제공에 집중합니다.
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div>
+                <h4>FREEBIT COMMUNITY</h4>
+                <p>코인 초보부터 고수까지 무료로 성장하는 글로벌 커뮤니티.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">이용약관</a>
+                <a href="#">커뮤니티 가이드</a>
+                <a href="#">파트너십 문의</a>
+            </div>
+            <button class="ghost-button" type="button">무료로 시작</button>
+        </footer>
     </div>
+
     <script src="main.js"></script>
 </body>
 </html>
