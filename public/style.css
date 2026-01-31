@@ -399,6 +399,91 @@ body {
     color: var(--text-muted);
 }
 
+.free-core-section {
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
+    padding: 36px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+.free-core-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+}
+
+.free-core-card {
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+    padding: 18px;
+    background: rgba(47, 128, 237, 0.05);
+    display: grid;
+    gap: 12px;
+}
+
+.free-core-card ul {
+    margin: 0;
+    padding-left: 18px;
+    color: var(--text-soft);
+    display: grid;
+    gap: 8px;
+}
+
+.premium-section {
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
+    padding: 36px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+.premium-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    gap: 24px;
+}
+
+.premium-stack {
+    display: grid;
+    gap: 14px;
+}
+
+.premium-card {
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+    padding: 16px;
+    background: rgba(47, 128, 237, 0.04);
+    display: grid;
+    gap: 8px;
+}
+
+.premium-card h3 {
+    margin: 0;
+    font-size: 1.05rem;
+}
+
+.premium-pricing {
+    display: grid;
+    gap: 16px;
+}
+
+.pricing-card.free {
+    background: rgba(47, 128, 237, 0.04);
+    border: 1px solid var(--border);
+}
+
+.price-sub {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.pricing-note {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
 .discussion-section {
     background: rgba(255, 255, 255, 0.9);
     border-radius: var(--radius-lg);
@@ -1035,7 +1120,9 @@ body {
     .discussion-section,
     .news-section,
     .policies-section,
-    .market-section {
+    .market-section,
+    .free-core-section,
+    .premium-section {
         padding: 24px;
     }
 
@@ -1046,5 +1133,9 @@ body {
 
     .post-actions {
         flex-wrap: wrap;
+    }
+
+    .premium-layout {
+        grid-template-columns: 1fr;
     }
 }
